@@ -1,0 +1,39 @@
+Srs.,
+
+can you help me with the development of this code?
+
+Build a code in bash script
+
+From the first day of January 2009, the new Orthographic Reform took effect.
+Since then, changes have occurred in terms of graphical accentuation, the use of the hyphen,
+umbra and, above all, our alphabet. Now the alphabet is composed of 26 letters: A, B, C, D, E, F,
+G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.
+Based on this information, a student thought about encrypting phrases, using lists (arrays)
+of characters. In his diagram, he used five lists with a vowel in each list and the total of up to
+six 6 elements of the alphabet. To avoid failures in encryption or decryption, it standardized the use of
+lowercase characters. He also performed the substitution of spaces by the use of a dot.
+Here are some notes found:
+
+$ sentence = "Test"
+$ echo $ {a ,,}
+Test
+a = (a b h n t z)
+b = (e c j p v.)
+c = (i d k q w :)
+d = (or f l r x;)
+e = (u g m s and /)
+sentence = "test"
+frasec = "a4 b0 e3 a4 b0"
+
+lphase = (a4 b0 e3 a4 b0)
+echo $ {a [4]} $ {b [0]} $ {e [3]} $ {a [4]} $ {b [0]}
+IFS = '' read -r -a lfrase <<< "$ frasec"
+letter = $ {lphase [$ i]}
+character = $ {letter: 0: 1}
+index = $ {letter: 1: 1}
+if ["$ character" = "a"]; then echo $ {a [$ index]}; fi
+end = $ {# a [@]}
+for ((i = 0; i <end; i ++)); echo "$ i"; done
+
+Build a code in bash script that encrypts and decrypts phrases using
+reasoning presented above.
